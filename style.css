@@ -136,5 +136,36 @@ text-shadow: 2px 2px  #000000;
 
 .gen2{
   background-color: var(--gen2-color); background-image: var(--bg); box-shadow: 0px 0px 30px 5px var(--gen2-color);
-  
   }
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    color: white;
+    text-shadow: 3px 3px  var(--gen2-color);
+  }
+
+#spind41{
+  background-color: var(--gen2-color); background-image: var(--bg); box-shadow: 0px 0px 30px 5px var(--gen2-color);
+  width: 90%;
+  padding: 12px;
+  margin: auto;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+
+#spind41 img{
+  width: 74%;
+  border-radius: 20px;
+}
+
+#spind41 h2{
+  text-shadow: 3px 3px black;
+}
+
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+    color: white;
+    text-shadow: 3px 3px  black;
+}
