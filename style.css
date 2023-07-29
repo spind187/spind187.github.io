@@ -41,7 +41,7 @@ h1{
     font-size: 100px;
     color: #fff;
     text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
     margin-left: 0%;
   }
 
@@ -51,15 +51,6 @@ h1{
     }
   }
   
-  @-webkit-keyframes glow {
-    from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
-    }
-    
-    to {
-      text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
-    }
-  }
 
   #topbtn{
     text-align: right;
