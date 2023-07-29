@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spind</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function showlogin(){
+            document.getElementById("main").style.display = "none";
+            document.getElementById("login").style.display = "block";
+        }
+
+        function showhome(){
+            document.getElementById("login").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo" onclick="showhome()"><h1 class="glow">Spind 41</h1></a>
+        <div class="header-right">
+          <a class="active" href="#home" onclick="showlogin()">Login</a>
+        </div>
+      </div>
+<div id="main">
+    <button class="menubtn" id="b1">stock</button>
+    <button class="menubtn" id="b2">stats</button>
+    <button class="menubtn" id="b3">history</button>
+</div>
+<div id="login" style="display: none;">
+    <h2>ENTER PASSWORD</h2>
+    <input type="password">
+    <input type="submit">
+    <button class="menubtn" id="b3" onclick="showhome()">back</button>
+</div>
+</body>
+
+</html>
