@@ -13,8 +13,14 @@
             document.getElementById("login").style.display = "block";
         }
 
+        function showhistory(){
+            document.getElementById("main").style.display = "none";
+            document.getElementById("history").style.display = "block";
+        }
+
         function showhome(){
             document.getElementById("login").style.display = "none";
+            document.getElementById("history").style.display = "none";
             document.getElementById("main").style.display = "block";
         }
     </script>
@@ -30,11 +36,15 @@
 <div id="main">
     <button class="menubtn" id="b1">stock</button>
     <button class="menubtn" id="b2">stats</button>
-    <button class="menubtn" id="b3">history</button>
+    <button class="menubtn" id="b3" onclick="showhistory()">history</button>
 </div>
 
-<div id="history">
-    
+<div id="history" style="display: none;">
+    <div id="spind41">
+        <h2>Spind (2021/2022)</h2>
+        <img src="old.jpg" alt="">
+        <p>Bereits im Schuljahr 2021/2020 gab es einen "Snackspind", dieser war jedoch eher im kleineren Maßstab. Dabei war der alte Spind unter dem Namen "Spind 41" bekannt.</p>
+    </div>
 </div>
 <div id="login" style="display: none;">
     <h2>ENTER PASSWORD</h2>
