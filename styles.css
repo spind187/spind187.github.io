@@ -10,55 +10,8 @@ body {
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-}
-
-.search-container {
-    position: absolute;
-    top: 150px;  /* Verschiebe die Suchleiste exakt 50px nach unten */
-    width: 90%;
-    max-width: 600px;
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-}
-
-.search-form {
-    display: flex;
-    width: 100%;
-}
-
-.search-bar {
-    flex: 1;
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #444;
-    border-radius: 25px 0 0 25px;
-    background-color: #222;
-    color: white;
-    outline: none;
-}
-
-.search-bar::placeholder {
-    color: #888;
-}
-
-.search-button {
-    padding: 0 20px;
-    font-size: 1.2rem;
-    border: 2px solid #444;
-    border-left: none;
-    border-radius: 0 25px 25px 0;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    outline: none;
-}
-
-.search-button:hover {
-    background-color: #444;
 }
 
 .container {
@@ -68,21 +21,59 @@ body {
     overflow: hidden;
 }
 
+.search-bar {
+    position: absolute;
+    top: 150px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    z-index: 1001;
+    margin-left: 10%;
+}
+
+.search-bar input {
+    width: calc(100% - 50px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 24px;
+    outline: none;
+    background-color: #222;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-bar img {
+    width: 24px;
+    height: 24px;
+}
+
 .circle {
     position: absolute;
-    width: 200vw;  /* Durchmesser des Kreises = 200% der Viewport-Breite */
-    height: 200vw; /* Durchmesser des Kreises = 200% der Viewport-Breite */
+    width: 200vw;
+    height: 200vw;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: calc(100vw - 100vw); /* Verschiebt den Kreis so, dass der Mittelpunkt rechts unterhalb des Bildschirms liegt */
-    top: calc(100vh - 140vw);  /* Verschiebt den Kreis weiter nach oben */
+    left: calc(100vw - 100vw);
+    top: calc(100vh - 140vw);
 }
 
 .icon {
     position: absolute;
-    width: 25vw;  /* Icons sind jetzt dreimal so groß */
+    width: 25vw;
     height: 25vw;
     cursor: pointer;
     display: flex;
@@ -96,54 +87,68 @@ body {
     object-fit: cover;
 }
 
-.qr-container {
+.modal {
     display: none;
     position: fixed;
-    top: 50%;
+    z-index: 1000;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 10;
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.qr-container input {
-    width: 80%;
+.modal-content {
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #888;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#qrCodeInput {
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    color: white;
 }
 
-.qr-container button {
-    padding: 10px 20px;
+#generateQRCode {
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#generateQRCode:hover {
     background-color: #444;
-    color: white;
-    cursor: pointer;
 }
 
-.qr-container button:hover {
-    background-color: #555;
-}
-
-#qrCode img {
+.qr-code-container {
     margin-top: 20px;
-    max-width: 100%;
-    height: auto;
-}
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+    text-align: center;
+    overflow: auto;
 }
