@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Icon Circle</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-    <div class="search-container">
-        <form action="https://www.google.com/search" method="get" class="search-form">
-            <input type="text" name="q" placeholder="Google-Suche" class="search-bar">
-            <button type="submit" class="search-button">🔍</button>
-        </form>
-    </div>
-
     <div class="container">
         <div class="circle">
             <div class="icon"><img src="icon1.png" alt="Icon 1"></div>
@@ -21,7 +15,7 @@
             <div class="icon"><img src="icon3.png" alt="Icon 3"></div>
             <div class="icon"><img src="icon4.png" alt="Icon 4"></div>
             <div class="icon"><img src="icon5.png" alt="Icon 5"></div>
-            <div class="icon" id="qrIcon"><img src="icon6.png" alt="QR Code Generator"></div>
+            <div class="icon"><img src="icon6.png" alt="Icon 6"></div>
             <div class="icon"><img src="icon7.png" alt="Icon 7"></div>
             <div class="icon"><img src="icon8.png" alt="Icon 8"></div>
             <div class="icon"><img src="icon9.png" alt="Icon 9"></div>
@@ -29,17 +23,22 @@
             <div class="icon"><img src="icon11.png" alt="Icon 11"></div>
             <div class="icon"><img src="icon12.png" alt="Icon 12"></div>
         </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Google Suche">
+            <button id="searchButton"><img src="search-icon.png" alt="Search"></button>
+        </div>
+
+        <div id="qrCodeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <input type="text" id="qrCodeInput" placeholder="Geben Sie einen Text ein">
+                <button id="generateQRCode">QR Code generieren</button>
+                <div id="qrCodeContainer" class="qr-code-container"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- Bereich zum Einfügen des Links und Generieren des QR-Codes -->
-    <div id="qrContainer" class="qr-container">
-        <button id="closeQR" class="close-button">✖</button>
-        <input type="text" id="linkInput" placeholder="Füge den Link ein">
-        <button id="generateQR">QR Code generieren</button>
-        <div id="qrCode"></div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
